@@ -1,10 +1,10 @@
-﻿# Advanced Marketplace Scraper
+# Advanced Marketplace Scraper
 
 **Архитектура промышленного парсера. 100K+ товаров/сутки: CDP, Playwright, прокси-пулы, Redis, Celery**
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://python.org)
 [![Playwright](https://img.shields.io/badge/Playwright-1.45-green?logo=playwright)](https://playwright.dev)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/License-Shamanchi-green)](LICENSE)
 
 ---
 
@@ -78,8 +78,7 @@ GitHub Actions: Ruff, MyPy, Pytest, Docker build
 ---
 
 ## Лицензия
-MIT
-
+Лицензия Shamanchi 1.0 (source-available) — см. [LICENSE](LICENSE).
 ---
 
 > Источник темы: Каталог портфолио, запись advanced-marketplace-scraper
