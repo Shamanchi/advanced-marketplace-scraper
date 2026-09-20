@@ -1,0 +1,40 @@
+﻿version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: advanced-marketplace-scraper
+    environment:
+      - SCRAPER_CONCURRENCY=\
+      - SCRAPER_DELAY_MIN=\
+      - SCRAPER_DELAY_MAX=\
+      - PROXY_LIST=\
+      - HEADLESS=\
+      - DATABASE_URL=\
+      - REDIS_URL=\
+      - CDP_ENDPOINT=\
+      - LOG_LEVEL=\
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=scraper
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  redis_data:
+  postgres_data:
